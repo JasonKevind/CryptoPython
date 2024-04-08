@@ -65,9 +65,11 @@ def getvalue():
     output_sorted = output.sort_values(by=sorted_indicator, ascending=ascending_dict)
    else:
     output_sorted = output.sort_values(by=['RSI'], ascending=[False, False])  
-   
    result = output_sorted.iloc[:15].to_dict(orient='records')
    print(result)
    return result
+@app.route("/api",methods = ["GET"])
+def api():
+    return "Done Done..."
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=5000)
