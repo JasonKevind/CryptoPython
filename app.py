@@ -32,7 +32,7 @@ def getvalue():
        sort = sorted(Indicator_value,key=lambda x: priority.get(x,float('inf')))
        return sort
    sorted_indicator = Sort_Ind(Indicator)
-   coin_length = len(coins)
+   coin_length = 28
    for i in range(0,coin_length):
         coin_name = coins['USD_coins'][i]
         ticker = yf.Ticker(coin_name)
